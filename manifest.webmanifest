@@ -1,0 +1,18 @@
+{
+  "name": "Copy Agent Mobile",
+  "short_name": "Copy Agent",
+  "description": "Generator deskripsi dan hashtag produk untuk TikTok, Shopee, FB Reels, dan Threads.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7f2",
+  "theme_color": "#0f766e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

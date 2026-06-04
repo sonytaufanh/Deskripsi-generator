@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Copy Agent" />
+    <title>AI Agent Deskripsi & Hashtag Produk</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <span class="eyebrow">AI Copy Workspace</span>
+          <h1 id="app-title">Product Copy Studio</h1>
+        </div>
+        <div class="platform-pills" aria-label="Target platform">
+          <span>TikTok</span>
+          <span>Shopee</span>
+          <span>FB Reels</span>
+          <span>Threads</span>
+        </div>
+      </header>
+
+      <section class="workspace" aria-labelledby="app-title">
+        <div class="panel input-panel">
+          <div class="brand-row">
+            <div class="mark">AI</div>
+            <div>
+              <h2>Brief Produk</h2>
+              <p>Nama produk wajib diisi. Detail lain dipakai untuk memperkuat angle konten.</p>
+            </div>
+          </div>
+
+          <form id="generator-form" class="form-grid">
+            <label class="field">
+              <span>Nama produk <strong>wajib</strong></span>
+              <input id="product-name" type="text" placeholder="Contoh: Serum Glow Bright 30ml" autocomplete="off" required />
+            </label>
+
+            <label class="field">
+              <span>Deskripsi tambahan <em>opsional</em></span>
+              <textarea id="product-description" rows="6" placeholder="Contoh: cocok untuk kulit kusam, tekstur ringan, bisa dipakai pagi dan malam"></textarea>
+            </label>
+
+            <div class="details-grid">
+              <label class="field">
+                <span>Harga <em>opsional</em></span>
+                <input id="product-price" type="text" placeholder="Contoh: Rp49.000" autocomplete="off" />
+              </label>
+
+              <label class="field">
+                <span>Promo <em>opsional</em></span>
+                <input id="product-promo" type="text" placeholder="Contoh: Diskon 20%" autocomplete="off" />
+              </label>
+
+              <label class="field">
+                <span>Target pembeli <em>opsional</em></span>
+                <input id="target-audience" type="text" placeholder="Contoh: remaja, pekerja aktif" autocomplete="off" />
+              </label>
+
+              <label class="field">
+                <span>Varian / bahan <em>opsional</em></span>
+                <input id="product-variant" type="text" placeholder="Contoh: 30ml, non alcohol" autocomplete="off" />
+              </label>
+
+              <label class="field wide">
+                <span>Keunggulan utama <em>opsional</em></span>
+                <input id="product-strength" type="text" placeholder="Contoh: tekstur ringan, cepat menyerap, aman untuk harian" autocomplete="off" />
+              </label>
+
+              <label class="field wide">
+                <span>Link produk <em>opsional</em></span>
+                <input id="product-link" type="url" placeholder="https://..." autocomplete="off" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Kategori produk</span>
+              <select id="product-category">
+                <option value="general">Umum</option>
+                <option value="skincare">Skincare & beauty</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Makanan & minuman</option>
+                <option value="electronics">Elektronik & gadget</option>
+                <option value="home">Rumah tangga</option>
+                <option value="baby">Bayi & anak</option>
+                <option value="health">Kesehatan</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Preset campaign</span>
+              <select id="campaign-preset">
+                <option value="soft">Soft selling</option>
+                <option value="hard">Hard selling</option>
+                <option value="viral">Produk viral</option>
+                <option value="affiliate">Affiliate review</option>
+                <option value="promo">Promo / flash sale</option>
+                <option value="educational">Edukasi produk</option>
+              </select>
+            </label>
+
+            <div class="api-grid">
+              <label class="field">
+                <span>AI provider</span>
+                <select id="ai-provider">
+                  <option value="local">Local generator</option>
+                  <option value="gemini">Gemini</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Gemini API key <em>opsional</em></span>
+                <input id="gemini-api-key" type="password" placeholder="AIza..." autocomplete="off" />
+              </label>
+
+              <label class="field">
+                <span>Model Gemini</span>
+                <input id="gemini-model" type="text" value="gemini-2.0-flash" autocomplete="off" />
+              </label>
+
+              <label class="remember-row">
+                <input id="remember-api-key" type="checkbox" />
+                <span>Ingat API key di browser ini</span>
+              </label>
+            </div>
+
+            <div class="controls">
+              <label class="field compact">
+                <span>Gaya tulisan</span>
+                <select id="tone">
+                  <option value="friendly">Ramah & natural</option>
+                  <option value="premium">Premium</option>
+                  <option value="energetic">Enerjik</option>
+                  <option value="simple">Singkat</option>
+                </select>
+              </label>
+
+              <label class="field compact">
+                <span>Jumlah hashtag</span>
+                <input id="hashtag-count" type="number" min="4" max="18" value="10" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Jumlah variasi</span>
+              <input id="variation-count" type="number" min="1" max="5" value="3" />
+            </label>
+
+            <button class="primary-action" type="submit">Generate</button>
+          </form>
+
+          <div class="history-panel">
+            <div class="history-title">
+              <h2>Riwayat</h2>
+              <button id="clear-history" class="text-action" type="button">Hapus</button>
+            </div>
+            <div id="history-list" class="history-list">
+              <p>Belum ada riwayat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel output-panel">
+          <div class="output-header">
+            <div>
+              <h2>Hasil Konten</h2>
+              <p id="status-text">Isi nama produk untuk mulai membuat konten.</p>
+            </div>
+            <div class="output-actions">
+              <button id="export-txt" class="secondary-action" type="button" disabled>Export TXT</button>
+              <button id="export-csv" class="secondary-action" type="button" disabled>Export CSV</button>
+              <button id="copy-all" class="secondary-action" type="button" disabled>Copy Semua</button>
+            </div>
+          </div>
+
+          <div id="results" class="results empty-state">
+            <div class="empty-copy">
+              <span>Belum ada hasil</span>
+              <p>Agent akan membuat deskripsi per platform, CTA, dan hashtag yang relevan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
