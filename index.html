@@ -17,6 +17,7 @@
         <div>
           <span class="eyebrow">AI Copy Workspace</span>
           <h1 id="app-title">Product Copy Studio</h1>
+          <p class="header-copy">Buat caption, deskripsi marketplace, dan hashtag multichannel dari satu brief produk.</p>
         </div>
         <div class="platform-pills" aria-label="Target platform">
           <span>TikTok</span>
@@ -37,120 +38,160 @@
           </div>
 
           <form id="generator-form" class="form-grid">
-            <label class="field">
-              <span>Nama produk <strong>wajib</strong></span>
-              <input id="product-name" type="text" placeholder="Contoh: Serum Glow Bright 30ml" autocomplete="off" required />
-            </label>
+            <section class="form-section">
+              <div class="section-heading">
+                <span>01</span>
+                <div>
+                  <h3>Produk</h3>
+                  <p>Informasi utama untuk membangun konteks copy.</p>
+                </div>
+              </div>
 
-            <label class="field">
-              <span>Deskripsi tambahan <em>opsional</em></span>
-              <textarea id="product-description" rows="6" placeholder="Contoh: cocok untuk kulit kusam, tekstur ringan, bisa dipakai pagi dan malam"></textarea>
-            </label>
-
-            <div class="details-grid">
               <label class="field">
-                <span>Harga <em>opsional</em></span>
-                <input id="product-price" type="text" placeholder="Contoh: Rp49.000" autocomplete="off" />
+                <span>Nama produk <strong>wajib</strong></span>
+                <input id="product-name" type="text" placeholder="Contoh: Serum Glow Bright 30ml" autocomplete="off" required />
               </label>
 
               <label class="field">
-                <span>Promo <em>opsional</em></span>
-                <input id="product-promo" type="text" placeholder="Contoh: Diskon 20%" autocomplete="off" />
+                <span>Deskripsi tambahan <em>opsional</em></span>
+                <textarea id="product-description" rows="6" placeholder="Contoh: cocok untuk kulit kusam, tekstur ringan, bisa dipakai pagi dan malam"></textarea>
               </label>
+            </section>
 
-              <label class="field">
-                <span>Target pembeli <em>opsional</em></span>
-                <input id="target-audience" type="text" placeholder="Contoh: remaja, pekerja aktif" autocomplete="off" />
-              </label>
+            <section class="form-section">
+              <div class="section-heading">
+                <span>02</span>
+                <div>
+                  <h3>Detail Jualan</h3>
+                  <p>Harga, promo, target pembeli, dan poin unggulan.</p>
+                </div>
+              </div>
 
-              <label class="field">
-                <span>Varian / bahan <em>opsional</em></span>
-                <input id="product-variant" type="text" placeholder="Contoh: 30ml, non alcohol" autocomplete="off" />
-              </label>
+              <div class="details-grid">
+                <label class="field">
+                  <span>Harga <em>opsional</em></span>
+                  <input id="product-price" type="text" placeholder="Contoh: Rp49.000" autocomplete="off" />
+                </label>
 
-              <label class="field wide">
-                <span>Keunggulan utama <em>opsional</em></span>
-                <input id="product-strength" type="text" placeholder="Contoh: tekstur ringan, cepat menyerap, aman untuk harian" autocomplete="off" />
-              </label>
+                <label class="field">
+                  <span>Promo <em>opsional</em></span>
+                  <input id="product-promo" type="text" placeholder="Contoh: Diskon 20%" autocomplete="off" />
+                </label>
 
-              <label class="field wide">
-                <span>Link produk <em>opsional</em></span>
-                <input id="product-link" type="url" placeholder="https://..." autocomplete="off" />
-              </label>
-            </div>
+                <label class="field">
+                  <span>Target pembeli <em>opsional</em></span>
+                  <input id="target-audience" type="text" placeholder="Contoh: remaja, pekerja aktif" autocomplete="off" />
+                </label>
 
-            <label class="field">
-              <span>Kategori produk</span>
-              <select id="product-category">
-                <option value="general">Umum</option>
-                <option value="skincare">Skincare & beauty</option>
-                <option value="fashion">Fashion</option>
-                <option value="food">Makanan & minuman</option>
-                <option value="electronics">Elektronik & gadget</option>
-                <option value="home">Rumah tangga</option>
-                <option value="baby">Bayi & anak</option>
-                <option value="health">Kesehatan</option>
-              </select>
-            </label>
+                <label class="field">
+                  <span>Varian / bahan <em>opsional</em></span>
+                  <input id="product-variant" type="text" placeholder="Contoh: 30ml, non alcohol" autocomplete="off" />
+                </label>
 
-            <label class="field">
-              <span>Preset campaign</span>
-              <select id="campaign-preset">
-                <option value="soft">Soft selling</option>
-                <option value="hard">Hard selling</option>
-                <option value="viral">Produk viral</option>
-                <option value="affiliate">Affiliate review</option>
-                <option value="promo">Promo / flash sale</option>
-                <option value="educational">Edukasi produk</option>
-              </select>
-            </label>
+                <label class="field wide">
+                  <span>Keunggulan utama <em>opsional</em></span>
+                  <input id="product-strength" type="text" placeholder="Contoh: tekstur ringan, cepat menyerap, aman untuk harian" autocomplete="off" />
+                </label>
 
-            <div class="api-grid">
-              <label class="field">
-                <span>AI provider</span>
-                <select id="ai-provider">
-                  <option value="local">Local generator</option>
-                  <option value="gemini">Gemini</option>
-                </select>
-              </label>
+                <label class="field wide">
+                  <span>Link produk <em>opsional</em></span>
+                  <input id="product-link" type="url" placeholder="https://..." autocomplete="off" />
+                </label>
+              </div>
+            </section>
 
-              <label class="field">
-                <span>Gemini API key <em>opsional</em></span>
-                <input id="gemini-api-key" type="password" placeholder="AIza..." autocomplete="off" />
-              </label>
+            <section class="form-section">
+              <div class="section-heading">
+                <span>03</span>
+                <div>
+                  <h3>Strategi Konten</h3>
+                  <p>Pilih kategori, campaign, tone, dan jumlah output.</p>
+                </div>
+              </div>
 
-              <label class="field">
-                <span>Model Gemini</span>
-                <input id="gemini-model" type="text" value="gemini-2.0-flash" autocomplete="off" />
-              </label>
+              <div class="strategy-grid">
+                <label class="field">
+                  <span>Kategori produk</span>
+                  <select id="product-category">
+                    <option value="general">Umum</option>
+                    <option value="skincare">Skincare & beauty</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="food">Makanan & minuman</option>
+                    <option value="electronics">Elektronik & gadget</option>
+                    <option value="home">Rumah tangga</option>
+                    <option value="baby">Bayi & anak</option>
+                    <option value="health">Kesehatan</option>
+                  </select>
+                </label>
 
-              <label class="remember-row">
-                <input id="remember-api-key" type="checkbox" />
-                <span>Ingat API key di browser ini</span>
-              </label>
-            </div>
+                <label class="field">
+                  <span>Preset campaign</span>
+                  <select id="campaign-preset">
+                    <option value="soft">Soft selling</option>
+                    <option value="hard">Hard selling</option>
+                    <option value="viral">Produk viral</option>
+                    <option value="affiliate">Affiliate review</option>
+                    <option value="promo">Promo / flash sale</option>
+                    <option value="educational">Edukasi produk</option>
+                  </select>
+                </label>
 
-            <div class="controls">
-              <label class="field compact">
-                <span>Gaya tulisan</span>
-                <select id="tone">
-                  <option value="friendly">Ramah & natural</option>
-                  <option value="premium">Premium</option>
-                  <option value="energetic">Enerjik</option>
-                  <option value="simple">Singkat</option>
-                </select>
-              </label>
+                <label class="field">
+                  <span>Gaya tulisan</span>
+                  <select id="tone">
+                    <option value="friendly">Ramah & natural</option>
+                    <option value="premium">Premium</option>
+                    <option value="energetic">Enerjik</option>
+                    <option value="simple">Singkat</option>
+                  </select>
+                </label>
 
-              <label class="field compact">
-                <span>Jumlah hashtag</span>
-                <input id="hashtag-count" type="number" min="4" max="18" value="10" />
-              </label>
-            </div>
+                <label class="field">
+                  <span>Jumlah hashtag</span>
+                  <input id="hashtag-count" type="number" min="4" max="18" value="10" />
+                </label>
 
-            <label class="field">
-              <span>Jumlah variasi</span>
-              <input id="variation-count" type="number" min="1" max="5" value="3" />
-            </label>
+                <label class="field">
+                  <span>Jumlah variasi</span>
+                  <input id="variation-count" type="number" min="1" max="5" value="3" />
+                </label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-heading">
+                <span>04</span>
+                <div>
+                  <h3>AI Engine</h3>
+                  <p>Gunakan Gemini untuk hasil AI, atau local untuk cepat.</p>
+                </div>
+              </div>
+
+              <div class="api-grid">
+                <label class="field">
+                  <span>AI provider</span>
+                  <select id="ai-provider">
+                    <option value="local">Local generator</option>
+                    <option value="gemini">Gemini</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Gemini API key <em>opsional</em></span>
+                  <input id="gemini-api-key" type="password" placeholder="AIza..." autocomplete="off" />
+                </label>
+
+                <label class="field">
+                  <span>Model Gemini</span>
+                  <input id="gemini-model" type="text" value="gemini-2.0-flash" autocomplete="off" />
+                </label>
+
+                <label class="remember-row">
+                  <input id="remember-api-key" type="checkbox" />
+                  <span>Ingat API key di browser ini</span>
+                </label>
+              </div>
+            </section>
 
             <button class="primary-action" type="submit">Generate</button>
           </form>
